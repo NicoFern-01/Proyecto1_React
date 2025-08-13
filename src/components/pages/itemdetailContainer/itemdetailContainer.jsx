@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { productos } from "../../../products";
-import { ItemDetail } from "./itemDetail";
+import { ItemDetail } from "./ItemDetail";
 
 export const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
-  const { id } = useParams(); 
+  const { id } = useParams();
 
   useEffect(() => {
     const fetchItem = () => {
@@ -17,7 +17,7 @@ export const ItemDetailContainer = () => {
       });
     };
 
-    fetchItem().then((producto) => setItem(producto));
+    fetchItem().then(producto => setItem(producto));
   }, [id]);
 
   return (
@@ -26,3 +26,4 @@ export const ItemDetailContainer = () => {
     </div>
   );
 };
+
