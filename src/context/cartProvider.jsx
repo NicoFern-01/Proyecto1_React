@@ -1,11 +1,8 @@
-// cartContext.jsx
 import { createContext, useState, useEffect } from "react";
 
-// Crear contexto
 export const CartContext = createContext();
 
-// Provider del carrito
-const CartProvider = ({ children }) => {
+export const CartProvider = ({ children }) => {
   const [carrito, setCarrito] = useState(() => {
     const savedCart = localStorage.getItem("cart");
     return savedCart ? JSON.parse(savedCart) : [];
@@ -38,21 +35,21 @@ const CartProvider = ({ children }) => {
     );
   };
 
-  const resetCart = () => setCarrito([]);
-
   const removeById = (id) => {
-    setCarrito(carrito.filter((elemento) => elemento.id !== id));
+    setCarrito(carrito.filter((item) => item.id !== id));
   };
+
+  const resetCart = () => setCarrito([]);
 
   const calcularTotal = () => {
     return carrito.reduce(
-      (acc, elemento) => acc + elemento.precio * elemento.cantidad,
+      (acc, item) => acc + item.precio * item.cantidad,
       0
     );
   };
 
   const getTotalQuantity = () => {
-    return carrito.reduce((acc, elemento) => acc + elemento.cantidad, 0);
+    return carrito.reduce((acc, item) => acc + item.cantidad, 0);
   };
 
   return (
@@ -71,8 +68,3 @@ const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
-
-// Export default para poder importarlo sin llaves
-export default CartProvider;
-
-

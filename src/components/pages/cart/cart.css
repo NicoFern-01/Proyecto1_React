@@ -45,12 +45,53 @@
   margin-top: 1.5rem;
 }
 
-.cart-reset {
-  background-color: #007bff;
+.cart-reset,
+.cart-checkout,
+.cart-checkout-disabled {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 18px;
   border: none;
-  color: white;
-  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
-  border-radius: 4px;
-  margin-top: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Botón Vaciar carrito */
+.cart-reset {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.cart-reset:hover {
+  background-color: #c0392b;
+}
+
+/* Botón Finalizar compra */
+.cart-checkout {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.cart-checkout:hover {
+  background-color: #1e8449;
+}
+
+/* Botón deshabilitado de Finalizar compra */
+.cart-checkout-disabled {
+  background-color: #95a5a6;
+  color: #ecf0f1;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Mensaje de stock insuficiente */
+.stock-error {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 14px;
 }

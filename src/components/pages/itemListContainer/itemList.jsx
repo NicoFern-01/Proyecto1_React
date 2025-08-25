@@ -4,9 +4,13 @@ import './ItemList.css';
 export const ItemList = ({ productos }) => {
   return (
     <div className="items-container">
-      {productos.map(prod => (
-        <ItemCard key={prod.id} producto={prod} />
-      ))}
+      {productos.length > 0 ? (
+        productos.map((prod) => (
+          <ItemCard key={prod.id} producto={prod} />
+        ))
+      ) : (
+        <p>No hay productos disponibles 🚫</p>
+      )}
     </div>
   );
 };

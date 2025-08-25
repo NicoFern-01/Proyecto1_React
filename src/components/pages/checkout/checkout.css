@@ -1,0 +1,163 @@
+/* Contenedor principal */
+.checkout-container {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(145deg, #f0f4ff, #ffffff);
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.4s ease;
+}
+
+.checkout-container:hover {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Título principal */
+.checkout-container h1 {
+  margin-bottom: 2rem;
+  color: #222;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Formulario */
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Inputs con íconos */
+.checkout-form input {
+  width: 95%;
+  padding: 1rem 1rem 1rem 3rem;
+  margin: 0.7rem 0;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f7f9ff;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+
+.checkout-form input[name="nombre"] {
+  background-image: url('https://img.icons8.com/ios-glyphs/30/007bff/user--v1.png');
+}
+.checkout-form input[name="telefono"] {
+  background-image: url('https://img.icons8.com/ios-glyphs/30/007bff/phone.png');
+}
+.checkout-form input[name="email"] {
+  background-image: url('https://img.icons8.com/ios-glyphs/30/007bff/new-post.png');
+}
+
+.checkout-form input:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+
+.checkout-btn {
+  width: 95%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background: linear-gradient(90deg, #0056b3, #003f7f);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+
+.checkout-error {
+  color: #e63946;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background-color: #ffe5e5;
+  padding: 0.8rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.checkout-success {
+  color: #1fa900;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  background-color: #e6ffe6;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.checkout-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.checkout-cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  width: 100%;
+  text-align: left;
+}
+
+.checkout-cart-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+}
+.checkout-step-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.checkout-step-buttons button {
+  width: 48%;
+}
+
+.checkout-btn {
+  width: 95%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  background-color: #007bff; 
+  border: none;
+  border-radius: 8px; 
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* sombra ligera */
+}
+
+.checkout-btn:hover {
+  background-color: #0056b3; 
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.checkout-btn:disabled {
+  background-color: #a0c4ff; 
+  box-shadow: none;
+}
