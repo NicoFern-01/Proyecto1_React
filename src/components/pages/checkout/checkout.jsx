@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { CartContext } from "../../../context/cartContext";
 import { collection, doc, serverTimestamp, runTransaction } from "firebase/firestore";
-import { db } from "../../../firebaseconfig";
+import { db } from "../../../firebase";
 import "../checkout/checkout.css";
 
 const Checkout = () => {
