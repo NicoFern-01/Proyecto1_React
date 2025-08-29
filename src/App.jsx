@@ -4,9 +4,9 @@ import { Footer } from './components/layouts/footer/footer';
 import { ItemListContainer } from './components/pages/itemListContainer/itemListContainer';
 import { ItemDetailContainer } from './components/pages/itemdetailContainer/itemdetailContainer';
 import { NotFound } from './components/pages/notFound';
-import { Cart } from './components/pages/cart/cart'; // ← nuevo
-import CartContextProvider from './context/cartContext'; // importar provider
-import Checkout from "./components/pages/checkout/checkout"; // importar Checkout
+import { Cart } from './components/pages/cart/cart'; 
+import CartContextProvider from './context/cartContext'; 
+import Checkout from "./components/pages/checkout/checkout"; 
 
 
 function App() {
