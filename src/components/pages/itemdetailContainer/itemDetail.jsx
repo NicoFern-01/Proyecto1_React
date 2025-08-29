@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { CartContext } from "../../../context/cartContext";
-import './ItemDetail.css';
+import './itemDetail.css';
 
 export const ItemDetail = ({ item }) => {
   const [cantidad, setCantidad] = useState(1);
