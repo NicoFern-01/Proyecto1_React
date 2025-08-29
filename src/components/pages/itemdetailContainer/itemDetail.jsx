@@ -1,8 +1,8 @@
-import { useState, useContext } from "react";
+import React, { useState, useContext } from "react"; // 👈 Agregá "React"
 import { CartContext } from "../../../context/cartContext";
-import './itemDetail.css';
+import "./itemDetail.css";
 
-export const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item }) => {
   const [cantidad, setCantidad] = useState(1);
   const { addToCart } = useContext(CartContext);
 
@@ -34,4 +34,6 @@ export const ItemDetail = ({ item }) => {
     </div>
   );
 };
+
+export default ItemDetail;
 
